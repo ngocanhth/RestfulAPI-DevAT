@@ -1,7 +1,7 @@
 # Build a Restful API | Nodejs + Express + Mongodb 
 > + C.R.U.D, Filter, Paginate, Sort and Search API
 ## Author: Dev A.T Viet Nam
-## Youtube: https://youtu.be/lda2psSYT9Q
+## Youtube: https://youtu.be/E24_Kv9xrtw
 ## Getting started: `npm install` -> `npm run dev`
 ## 🔥 Donate
 > + 👉 Buy Me a Coffee . Thank You ! 💗 :
@@ -61,7 +61,7 @@ II - How to use?
     > DELETE /api/products/:id
 
   2. Filter        
-    gt = greater than, gte = greater than or equa.       
+    gt = greater than, gte = greater than or equal.       
     lt = lesser than, lte = lesser than or equal.    
     
     > GET /api/products?price=15
