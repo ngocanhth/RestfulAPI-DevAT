@@ -25,7 +25,12 @@ export function APIfeatures(query, queryString){
     const search = this.queryString.search;
     if(search){
       this.query = this.query.find({
-        $text: { $search: search }
+       //  $text: { $search: search }
+        "$or":[
+            {title:{$regex:search}},
+            {description:{$regex:search}},
+            {category:{$regex:search}},
+        ]
       })
     }else{
       this.query = this.query.find()

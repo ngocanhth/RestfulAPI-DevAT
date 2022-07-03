@@ -25,10 +25,14 @@ const productSchema = new mongoose.Schema({
   timestamps: true
 })
 
-productSchema.index({title: 'text'})
+// Phải đánh dấu index để có thể tìm kiếm được
+
+// productSchema.index({title: 'text', price: 'text', description: 'text', category: 'text'})
+
+// productSchema.index({title: 'text'})
 
 const Products = mongoose.model('Products', productSchema)
 
-Products.createIndexes({title: 'text'})
+//  Products.createIndexes({title: 'text'})
 
 export default Products;

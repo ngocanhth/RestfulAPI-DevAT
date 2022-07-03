@@ -18,17 +18,14 @@ app.use(express.urlencoded())
 const URI = process.env.MONGODB_URL;
 
 mongoose.connect(URI, {
-  autoIndex: false
+  autoIndex: false  // Tắt index đi để tối ưu cho server, chỉ đánh dấu đối với những field cần tìm kiếm
 }, (err) => {
   if(err) throw err;
   console.log('Mongodb connection.')
 })
 
-
 // Routes
 app.use('/api', routes)
-
-
 
 // Start server listening
 const port = process.env.PORT || 5000;
